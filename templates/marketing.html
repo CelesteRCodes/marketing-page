@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<head>
+  
+</head>
+<body>
+
+  <div>
+  <br>
+    <center><h2>Bright Paths</h2></center>
+
+   <center><h4></h4> </center>
+
+  <form action="/" method='POST' id="entry-form">
+   <center><div class="form-group">
+      <br>
+      <label><strong>Email:</strong> <br>
+        <input class="form-control" type="text" name="reovery-email" id="email-entry-field" placeholder="Email">
+        
+      </label><br><br>
+
+      <label><strong>Full Name:</strong> <br>
+        <input class="form-control" type="text" name="recovery-username" id="entry-field" placeholder="Username">
+        
+      </label><br><br>
+
+
+      <button type="submit">Register</button><br>
+       </form> </center>
+
+    <br>
+
+    <center>
+    <div class="container">
+     
+      <a href="/"><button type="cancel">Cancel</button></a>
+    </div></center>
+
+    
+</body>
+
+{% endblock %}
