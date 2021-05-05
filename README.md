@@ -33,6 +33,7 @@ Stores registration information inputted by user on form
  
 
 ![Sign Up]() 
+
 </a><br>
 [Table Of Contents](#table-contents)
 
@@ -54,7 +55,7 @@ Stores registration information inputted by user on form
     `https://github.com/CelesteRCodes/marketing-page`
 * Create and activate a virtual environment inside your project directory: <br>
         `virtualenv env` <br>
-        `virtualenv env --always (for Windows)`
+        `virtualenv env --always (for Windows)`<br>
         `source env/bin/activate`
 * Install the dependencies: <br>
         `pip3 install -r requirements.txt`
