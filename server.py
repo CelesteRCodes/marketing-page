@@ -1,3 +1,14 @@
+from flask import Flask, flash, render_template, request, redirect, session
+
+
+import CRUD
+import model
+import os
+
+app = Flask(__name__)
+app.secret_key = "SHHHHHHHHHHH SEEKRIT"
+
+
 @app.route('/')
 def homepage():
     """Show homepage."""
@@ -18,11 +29,17 @@ def process_registration_form():
 
     if "email" not in session:
         
-
-        
-        email = request.form.get('email')
         name = request.form.get('name')
+        email = request.form.get('email')
 
-        CRUD.create_user(email, name)
+        CRUD.create_user(name, email)
+        
     
-    return redirect("/")
+    flash("We will be reaching out to you soon!")
+    return render_template("/register.html")
+
+
+if __name__ == '__main__':
+    app.debug = True
+    model.connect_to_db(app)
+    app.run(host='0.0.0.0')

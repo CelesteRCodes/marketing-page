@@ -13,7 +13,7 @@
 
    <center><h4></h4> </center>
 
-  <form action="/" method='POST' id="entry-form">
+  <form action='/process-registration-form' method='POST' id="entry-form">
    <center><div class="form-group">
       <br>
       <label><strong>Email:</strong> <br>
@@ -27,18 +27,33 @@
       </label><br><br>
 
 
-      <button type="submit">Register</button><br>
+      <button type="submit">Sign Up</button><br>
        </form> </center>
 
     <br>
 
     <center>
+        {% for message in get_flashed_messages() %}
+          {{ message }}
+        {% endfor %}
+    </center>
+
+    <center>
     <div class="container">
      
-      <a href="/"><button type="cancel">Cancel</button></a>
-    </div></center>
+    <a href="/"><button type="cancel">Back to Homepage</button></a>
+    <br><br>
 
-    
+
+    <a href="https://www.perficient.com/news-room/news-releases/2020/perficient-launches-bright-paths-program-to-drive-stem-education-and-career-opportunities">
+      <button>Perficient News Release</button></a>
+      
+
+    <a href="https://www.perficient.com/news-room/news-releases/2020/perficient-launches-bright-paths-program-to-drive-stem-education-and-career-opportunities">
+      <button>Perficient Blog Post</button></a>
+
+
+    </div></center>
 </body>
 
 {% endblock %}
